@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weaTher App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body class="bg-[#222] flex justify-center ">
+    <!-- PreLoader -->
+    <div id="preloader" class="bg-[#222] flex flex-col text-center">
+        <div class="-mt-16  sm:-mt-24">
+            <p class="text-[100px]">💋</p>
+        </div>
+        <div class="loader"></div>
+      </div>
+    <!-- Card -->
+    <div style="background:linear-gradient(135deg, #00feba ,#5b548a);" class="sm:mt-28 inline-block sm:p-10 p-4 rounded-2xl mt-12">
+        <!-- Wrapper -->
+        <div class="flex flex-col items-center">
+            <!-- Input field & Search Bar -->
+            <div class="flex items-center gap-4">
+                <!-- Input field -->
+                <div>
+                    <input id="input" class="placeholder-gray-700 font-sans outline-none h-[48px] sm:w-[270px] rounded-full pl-5" type="text" placeholder="Enter the city name">
+                </div>
+                <!-- Search Icon -->
+                <div id="search" class="cursor-pointer w-12 h-[48px] flex items-center justify-center sm:p-3 p-1 rounded-full  bg-white">
+                    <img class="bg-white h-6" src="./assets/search.png" alt="Search-Icon">
+                </div>
+            </div>
+            <!-- Invalid city para -->
+            <div id="invalid-para" class="hidden mt-7 sm:mt-12 text-center">
+                <p class="text-[25px] text-center text-white font-[600] font-sans">Invalid City Name</p>
+            </div>
+            <!-- Image & Text part -->
+            <div id="dataPart" class="hidden flex-col items-center">
+                <!-- Weather Image -->
+            <div class="mt-5">
+                <img id="image" class="w-[125px] sm:w-[165px]" src="./assets/clear.png" alt="Weather - Image">
+            </div>
+            <!-- Temparature & City Name -->
+            <div>
+                <p class="text-[75px] font-sans text-white"><span id="temprature">22</span><sup class="text-white text-[100px] inline-block pt-5">.</sup>c</p>
+                <p id="cityname" class="text-white font-sans text-[40px]">Bengaluru</p>
+            </div>
+            <!-- Humidity & Wind Speed -->
+            <div class="flex gap-5 sm:gap-12 mt-10">
+                <!-- Humidity -->
+                <div class="flex items-center gap-3">
+                    <!-- Image -->
+                    <div>
+                        <img class="h-[40px]" src="./assets/humidity.png" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div>
+                        <p class="text-white text-[30px]"><span id="humidity">53</span>%</p>
+                        <p class="text-white text-[18px]">Humidity</p>
+                    </div>
+                </div>
+                <!-- Wind -->
+                <div class="flex items-center gap-3">
+                    <!-- Image -->
+                    <div>
+                        <img class="h-[40px]" src="./assets/wind.png" alt="">
+                    </div>
+                    <!-- Text -->
+                    <div>
+                        <p class="text-white text-[30px]"><span id="windspeed">5.66</span> km/h</p>
+                        <p class="text-white text-[18px]">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
